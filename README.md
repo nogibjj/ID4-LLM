@@ -20,7 +20,11 @@ This project allows input of a piece of text describing the food and cusine styl
 
 ## Flask
 
-A flask app is developed to handle requests from the user. The app is in `app.py`.
+A flask app is developed to handle requests from the user. The app is in `app.py`. It can be run locally using the following command:
+
+```bash
+flask run
+```
 
 There are two interfaces in the app: 
 
