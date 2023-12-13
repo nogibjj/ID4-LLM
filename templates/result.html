@@ -13,8 +13,6 @@
 
         .bg-image {
             background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
             height: 100%;
             background-position: center;
             background-repeat: no-repeat;
@@ -25,8 +23,7 @@
         }
 
         .content {
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
             color: white;
             font-weight: bold;
             border: 3px solid #f1f1f1;
@@ -44,6 +41,7 @@
             margin-top: 20px;
             font-size: 1.2em;
             text-align: left;
+            white-space: pre-line; /* This ensures line breaks are respected */
         }
 
         .flashy-title {
