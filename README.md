@@ -22,25 +22,21 @@ This project allows input of a piece of text describing the food and cusine styl
 
 A flask app is developed to handle requests from the user. The app is in `app.py`.
 
-There are two routings in the app: 
+There are two interfaces in the app: 
 
-1. `/`
+1. The user inputs the food description and cusine style in the index page.
 
-    The homepage is routed to the `index()` function, which returns the `index.html` with a text box for users to write their mood.
+![index_page](pics/input.png)
 
-![index_page](./imgs/index.png)
+2. The use get the suggestions in the result page.
 
-2. `/get-color`
-    
-    The result page displays the color suggestion and description.
-
-![result_page](./imgs/result.png)
+![result_page](pics/output.png)
 
 ## LLM Integration
 
 In this project, the API of OpenAI is integrated with the app. A token was generated for the app to use.
 
-![openai](./imgs/openapi.png)
+![openai](pics/openai_api.png)
 
 ## Containerization
 
@@ -60,11 +56,15 @@ Then the image is pushed to Docker Hub using the following command:
 
 `docker push <username>/<repo name>`
 
+Here is the command line view of the process.
+
+![docker_hub](pics/push_commands.png)
+
 It can be verified that the image is successfully uploaded by checking the repository.
 
 Here is what this project's repository looks like after the push.
 
-![docker_hub_repo](./imgs/dockerhub.png)
+![docker_hub_repo](pics/docker_hub.png)
 
 ## Deployment
 
@@ -72,11 +72,7 @@ The website is then deployed to Azure. Add the LLM API key, and the website port
 
 Here is a screenshot of the Azure page.
 
-![app service](./imgs/AppService.png)
-
-Configuration settings:
-
-![app config](./imgs/config.png)
+![app service](pics/azure.png)
 
 ## Reference
 https://github.com/DerekLW6/Azure-Flask-App
