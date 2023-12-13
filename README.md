@@ -49,7 +49,7 @@ First, log in to Docker Hub in the terminal using the following command.
 
 Then the files in the project directory are packed into a docker image using the following command:
 
-`docker docker build -t <username>/<repo name> .`
+`docker build -t <username>/<repo name> .`
 
 
 Then the image is pushed to Docker Hub using the following command:
