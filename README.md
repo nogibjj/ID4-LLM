@@ -1,4 +1,4 @@
-
+![Test Python Versions](https://github.com/nogibjj/IDS706-MiniProject5-Sqlite/actions/workflows/cicd.yml/badge.svg)
 # IDS 706 Data Engineering Individual Project 4
 
 Yilin Yang 
