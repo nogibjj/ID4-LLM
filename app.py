@@ -4,8 +4,8 @@ import os
 
 app = Flask(__name__)
 
-# Set your OpenAI API key from the environment variable
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# Set the OpenAI API key
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 @app.route('/')
 def index():
@@ -18,12 +18,11 @@ def get_meal_suggestions():
     cuisine = request.form['cuisine']
 
     # Call OpenAI API to generate meal ideas
-    response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=f"Generate meal ideas using these ingredients: {ingredients}, in the style of {cuisine} cuisine.",
-        max_tokens=150
-    )
-    meal_ideas = response.choices[0].text.strip()
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": "We have ingredients: " + ingredients + " I want cusisine: " + cuisine},
+    ])
+    meal_ideas = response.choices[0]["message"]["content"]
 
     return render_template('result.html', ingredients=ingredients, cuisine=cuisine, meal_ideas=meal_ideas)
 
