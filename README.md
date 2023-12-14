@@ -7,7 +7,7 @@ Yilin Yang
 [Meal Planner](https://llm.braveplant-39791e9e.westus2.azurecontainerapps.io/get_meal_suggestions)
 
 
-[Youtube Link]()
+[Youtube Link](https://www.youtube.com/watch?v=gzjtc_hobXs)
 
 ## Purpose of the project
 
